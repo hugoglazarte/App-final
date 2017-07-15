@@ -5,6 +5,9 @@ import logo from './logo.svg';
 //necesitamos la info de VarTiendaController
 import VarTiendaController from './tiendaController';
 
+//import de Ordenar
+import Ordenar from './Ordenar';
+
 class Platillos extends Component{
     render(){
       //creamos la var que va a contener los div con la data de platillos
@@ -20,6 +23,7 @@ class Platillos extends Component{
                   <img role="presentation" src={ logo } className="ImagenPlatillo" />
                   <h2 className="TitlePlatillo">{ value.nombre }</h2>
                   <div className="DescripcionPlatillo">{ value.descripcion }</div>
+                  <Ordenar precio={ value.precio }/>
                 </div>
               </div>
           )
